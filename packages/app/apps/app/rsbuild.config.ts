@@ -3,6 +3,9 @@ import { pluginReact } from '@rsbuild/plugin-react';
 
 export default defineConfig({
   plugins: [pluginReact()],
+  server: {
+    port: 3000, // Specify your desired port here
+  },
   source: {
     entry: {
       index: './src/index.tsx',
