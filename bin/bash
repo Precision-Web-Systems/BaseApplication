@@ -1,5 +1,6 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
+echo "Running in Docker: $CONTAINER_NAME $@"
 CONTAINER_NAME=$1
 if docker compose ps "$CONTAINER_NAME" | grep -q "running"; then
     docker compose exec "$CONTAINER_NAME" "${@:2}"

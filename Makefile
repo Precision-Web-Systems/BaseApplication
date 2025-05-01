@@ -16,6 +16,9 @@ stop:
 
 restart: stop start
 
+install:
+	$(MAKE) bun-install
+
 bun-install:
-	docker compose run --rm app bun install
+	./bin/bash app bun install
 
