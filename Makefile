@@ -22,3 +22,11 @@ install:
 bun-install:
 	./bin/bash app bun install
 
+direnv-install:
+	brew install direnv
+
+direnv-enable:
+	direnv allow
+
+direnv-disable:
+	direnv deny
