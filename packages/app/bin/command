@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+COMMAND_NAME=$(basename $0)
+echo -e "\n\033[1;4mRunning in Docker:\033[0m $COMMAND_NAME $@\033[0m\n"
+exec ../../bin/bash app "$COMMAND_NAME" "$@"

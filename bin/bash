@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+CONTAINER_NAME=$1
+if docker compose ps "$CONTAINER_NAME" | grep -q "running"; then
+    docker compose exec "$CONTAINER_NAME" "${@:2}"
+else
+    docker compose run --rm "$CONTAINER_NAME" "${@:2}"
+fi

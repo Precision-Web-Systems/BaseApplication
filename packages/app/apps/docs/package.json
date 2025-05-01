@@ -1,0 +1,26 @@
+{
+  "name": "@repo/docs",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "rsbuild dev",
+    "build": "rsbuild build",
+    "preview": "rsbuild preview",
+    "lint": "eslint .",
+    "clean": "rm -rf .turbo node_modules dist"
+  },
+  "dependencies": {
+    "@repo/shared": "workspace:*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "^0.1.0",
+    "@rsbuild/plugin-react": "^0.1.0",
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  }
+} 

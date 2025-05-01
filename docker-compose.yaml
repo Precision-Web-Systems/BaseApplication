@@ -1,0 +1,13 @@
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: packages/app/Dockerfile
+      target: development
+    volumes:
+      - ./packages/app:/code
+    ports:
+      - 3000:3000
+      
+      
