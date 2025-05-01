@@ -9,5 +9,15 @@ services:
       - ./packages/app:/code
     ports:
       - 3000:3000
-      
-      
+    command: ["/bin/bash", "-c", "while true; do echo 'sleeping'; sleep 30; done"]
+  
+  dozzle:
+    image: amir20/dozzle:latest
+    ports:
+      - 9999:8080
+    environment:
+      - DOZZLE_TITLE=Dozzle
+      - DOZZLE_API_KEY=dozzle
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
